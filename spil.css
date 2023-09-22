@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  margin-inline: auto;
+}
+
+.hide {
+  display: none;
+}
+
+#screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#startskærm {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(assets/startskærm.svg);
+  background-size: cover;
+}
+
+#level_complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(assets/vinder.svg);
+  background-size: cover;
+}
+
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(assets/gameover.svg);
+  background-size: cover;
+}
+
+#provigenknap1 {
+  width: 27%;
+  position: absolute;
+  top: 43%;
+  left: 37%;
+  background-image: url(assets/prøvigen.svg);
+  aspect-ratio: 372/146;
+  cursor: pointer;
+  background-size: cover;
+}
+
+#provigenknap2 {
+  width: 27%;
+  position: absolute;
+  top: 39%;
+  left: 38%;
+  background-image: url(assets/prøvigen.svg);
+  aspect-ratio: 372/146;
+  cursor: pointer;
+  background-size: cover;
+}
+
+#spilknap {
+  width: 30%;
+  position: absolute;
+
+  top: 35%;
+  left: 65%;
+  background-image: url(assets/start.svg);
+  aspect-ratio: 372/146;
+  cursor: pointer;
+  background-size: cover;
+}
+
+#regelknap {
+  width: 25%;
+  position: absolute;
+  top: 60%;
+  left: 68%;
+  background-image: url(assets/regler.svg);
+  aspect-ratio: 372/146;
+  cursor: pointer;
+  background-size: cover;
+}
+
+#regelskærm {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(assets/regelskærm.svg);
+  background-size: cover;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-image: url(assets/spilskærm_baggrund.svg);
+  background-size: cover;
+}
+
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-image: url(assets/spilskærm_forgrund.svg);
+  background-size: cover;
+  pointer-events: none;
+}
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  pointer-events: none;
+}
+
+#spegepolse_container {
+  width: 8%;
+  aspect-ratio: 233/202;
+  position: absolute;
+  top: 20%;
+}
+
+#spegepolse_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/spegepølse.svg);
+  background-size: cover;
+}
+
+#leverpostej_container {
+  width: 8%;
+
+  aspect-ratio: 233/202;
+  position: absolute;
+  top: 20%;
+}
+
+#leverpostej_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/leverpostej.svg);
+  background-size: cover;
+}
+
+#aggemad_container {
+  width: 8%;
+  aspect-ratio: 233/202;
+  position: absolute;
+  top: 20%;
+}
+
+#aggemad_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/æggemad.svg);
+  background-size: cover;
+}
+
+#radenspegepolse_container {
+  width: 8%;
+  aspect-ratio: 235/278;
+  position: absolute;
+  top: 20%;
+}
+
+#radenspegepolse_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/radenspegepølse.svg);
+  background-size: cover;
+}
+
+#radenaggemad_container {
+  width: 8%;
+  aspect-ratio: 243/284;
+  position: absolute;
+  top: 20%;
+}
+
+#radenaggemad_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/radenaggemad.svg);
+  background-size: cover;
+}
+
+#radenleverpostej_container {
+  width: 8%;
+
+  aspect-ratio: 235/289;
+  position: absolute;
+  top: 20%;
+}
+
+#radenleverpostej_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/radenleverpostej.svg);
+  background-size: cover;
+}
+
+#pointboard {
+  width: 18%;
+  aspect-ratio: 157/157;
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  background-image: url(assets/pointtavle.svg);
+  background-size: cover;
+}
+
+#hjerte {
+  width: 10%;
+  aspect-ratio: 80/70;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  background-image: url(assets/hjerte.svg);
+  background-size: cover;
+}
+
+#point {
+  position: absolute;
+  left: 0%;
+  top: 35%;
+
+  width: 100%;
+  text-align: center;
+}
+
+#liv {
+  position: absolute;
+  left: 43%;
+  top: 27%;
+  font-size: 3rem;
+}
+
+.fald {
+  animation-name: fald_kf;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes fald_kf {
+  from {
+    translate: 0 -250%;
+  }
+  to {
+    translate: 0 460%;
+  }
+}
+
+.drej {
+  animation-name: drej_kf;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes drej_kf {
+  0% {
+  }
+
+  50% {
+    scale: 0.5;
+  }
+
+  100% {
+    rotate: 360deg;
+    scale: 0;
+  }
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
+.pos1 {
+  left: 35%;
+}
+
+.pos2 {
+  left: 62%;
+}
+
+.pos3 {
+  left: 45%;
+}
+
+.pos4 {
+  left: 55%;
+}
+
+.pos5 {
+  left: 60%;
+}
+
+.speed1 {
+  animation-duration: 2s;
+}
+.speed2 {
+  animation-duration: 1.5s;
+}
+.speed3 {
+  animation-duration: 3s;
+}
+
+.forsvind {
+  animation-name: forsvind_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes forsvind_kf {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.5s;
+}
+
+.delay3 {
+  animation-delay: 1s;
+}
+
+.delay4 {
+  animation-delay: 1.2s;
+}
+
+.delay5 {
+  animation-delay: 1.5s;
+}
+
+.delay6 {
+  animation-delay: 2s;
+}
+
+#urskive {
+  width: 15%;
+  aspect-ratio: 900/680;
+  position: absolute;
+  top: 1%;
+  left: 0%;
+  background-image: url(assets/tid.svg);
+  background-size: cover;
+}
+
+#urviser {
+  position: absolute;
+  top: 23%;
+  left: 46%;
+  width: 3%;
+  height: 28%;
+  border-radius: 40%;
+  transform-origin: bottom;
+  background-color: black;
+}
+
+.viser_animation {
+  animation-name: viser_kf;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes viser_kf {
+  to {
+    transform: rotate(360deg);
+  }
+}

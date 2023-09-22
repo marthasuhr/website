@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="spil.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Spil</title>
+</head>
+
+<body>
+    <header>
+
+        <div>
+            <a href="index.html">
+                <img class="logo" src="assets/Titel.svg" alt="titel">
+            </a>
+        </div>
+        <nav>
+            <ul>
+
+                <li><a href="ide.html">Ide</a></li>
+                <li><a href="teknik.html">Teknik</a></li>
+                <li><a href="grafik.html">Grafik</a></li>
+                <li><a href="assets.html">Assets</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+
+        <div id="screen">
+            <div id="game">
+                <div id="game_background"></div>
+                <div id="game_elements">
+                    <div id="spegepolse_container">
+                        <div id="spegepolse_sprite"></div>
+                    </div>
+                    <div id="leverpostej_container">
+                        <div id="leverpostej_sprite"></div>
+                    </div>
+
+                    <div id="aggemad_container">
+                        <div id="aggemad_sprite"></div>
+                    </div>
+                    <div id="radenspegepolse_container">
+                        <div id="radenspegepolse_sprite"></div>
+                    </div>
+                    <div id="radenleverpostej_container">
+                        <div id="radenleverpostej_sprite"></div>
+                    </div>
+                    <div id="radenaggemad_container">
+                        <div id="radenaggemad_sprite"></div>
+                    </div>
+                </div>
+                <div id="game_foreground"></div>
+                <div id="game_ui">
+
+                    <div id="urskive">
+                        <div id="urviser"></div>
+                    </div>
+
+                    <div id="pointboard"> <span id="point"></span></div>
+                    <div id="hjerte"> <span id="liv"></span></div>
+                </div>
+
+            </div>
+            <div id="startskærm">
+                <div id="spilknap"></div>
+                <div id="regelknap"></div>
+
+            </div>
+            <div id="regelskærm"></div>
+            <div id="game_over">
+                <div id="provigenknap1"></div>
+            </div>
+            <div id="level_complete">
+                <div id="provigenknap2"></div>
+            </div>
+            <div id="sounds">
+                <audio src="lyde/groove.mp3" id="groove" controls></audio>
+                <audio src="lyde/kliklyd.m4a" id="klik" controls></audio>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>Madpakken af Martha Suhr Larsen</footer>
+    <script src="spil.js"></script>
+</body>
+
+</html>
